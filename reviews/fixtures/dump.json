@@ -16,7 +16,7 @@
     "name": "Ноутбук Lenovo Ideapad 3 Intel Core i5-10210U 8GB DDR 128GB SSD NVidia MX330 2GB FHD DOS серый",
     "category": "hardware",
     "description": "Основные характеристики\r\nТип: ноутбук\r\nОперационная система: DOS\r\n\r\nПроцессор\r\nПроцессор: Intel Core i5-10210U\r\nЧастота: 1200-3400 МГц\r\nКоличество ядер: 2\r\nКоличество потоков: 4\r\nОбъем кэша: 4 Мб\r\n\r\nЭкран\r\nДиагональ экрана: 15.6\"\r\nРазрешение экрана: 1920x1080 Full HD\r\nСенсорный экран: нет\r\n\r\nВидеокарта\r\nГрафический контроллер: Nvidia MX330\r\nОбъем видеопамяти: 2 GB\r\n\r\nОперативная память\r\nОбъем оперативной памяти: 8 GB DDR4\r\n\r\nНакопители\r\nТип накопителя: SSD\r\nОбъем накопителя SSD: 128 GB\r\nОптический привод: нет\r\n\r\nСетевые интерфейсы\r\nПоддержка WiFi: IEEE 802.11ac\r\nПоддержка Bluetooth: есть\r\n\r\nУстройства управления\r\nУстройство позиционирования: TouchPad\r\nПодсветка клавиатуры: нет\r\n\r\nИнтерфейсы\r\n2 x USB 3.1\r\n1 х USB 2.0\r\n1 x HDMI\r\n1 x Audio/Mic\r\n1 x Cardreader\r\n\r\nПитание \r\nТип аккумулятора: литий-ионный\r\nЕмкость аккумулятора: 35 ВтЧ\r\n\r\nРазмеры\r\nРазмеры: 362 x 253 x 20 мм\r\nВес: от 1.85 кг",
-    "photo": "product_images/lenovo_laptop_K5NXoVT.png"
+    "photo": "product_images/lenovo_laptop.png"
   }
 },
 {
@@ -97,6 +97,16 @@
     "product": 11,
     "description": "Дорого дорого linux бесплатный",
     "rating": 1
+  }
+},
+{
+  "model": "webapp.review",
+  "pk": 6,
+  "fields": {
+    "author": 4,
+    "product": 10,
+    "description": "Я бы себе не купил бы",
+    "rating": 3
   }
 }
 ]
