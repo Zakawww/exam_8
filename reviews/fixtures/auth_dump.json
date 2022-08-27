@@ -1,0 +1,98 @@
+[
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Модераторы",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 2,
+  "fields": {
+    "name": "users",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$nQJ2zxUHVsOL4JSxZsOfeZ$EsvXi6EzuDBmEB1/lFcL3O0jPJcSqxGoApNCAEWX1pw=",
+    "last_login": "2022-08-27T10:19:00.738Z",
+    "is_superuser": false,
+    "username": "user",
+    "first_name": "",
+    "last_name": "",
+    "email": "user_1@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-08-27T09:49:52Z",
+    "groups": [
+      [
+        "users"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$zTfX15SjUM7JVZ4Hstwrwp$L86dLBm5ktPcFJ4Tch3AkuOCdKx7UJAZ4+qex+7bY0w=",
+    "last_login": "2022-08-27T10:12:07.118Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-08-27T09:50:39.979Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$dfFp5GPsTuWFZS2KgwDtsP$UXla/d1FhTCU9AqJhK5B9w+DtTMCaviSyaiB4o03KiU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "moderator",
+    "first_name": "Модератор",
+    "last_name": "А",
+    "email": "moderator_1@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-08-27T10:14:47Z",
+    "groups": [
+      [
+        "Модераторы"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$IRcK5yoNeiuJK6KNvFFKE8$oCNqFk3XrCLdK4Ij1UPLYop/pg3pyNNLXfEFwCDf59U=",
+    "last_login": "2022-08-27T10:20:49.587Z",
+    "is_superuser": false,
+    "username": "user2",
+    "first_name": "user2",
+    "last_name": "us",
+    "email": "user_333@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-08-27T10:16:26Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
