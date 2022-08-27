@@ -23,7 +23,8 @@ class Product(models.Model):
     category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default=CATEGORY_CHOICES[0][0],
                                 verbose_name='Категория')
     description = models.TextField(max_length=2000, null=True, blank=True, verbose_name='Описание')
-    photo = models.ImageField(upload_to='product_images', null=True, blank=True, verbose_name='Картинка')
+    photo = models.ImageField(upload_to='product_images', null=True, blank=True, default='/product_images/no_foto.png',
+                              verbose_name='Картинка')
 
     def avg_rating(self):
         ratings = Review.objects.filter(product=self.pk)
@@ -48,7 +49,8 @@ class Product(models.Model):
 
 class Review(models.Model):
     author = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE, verbose_name='Автор')
-    product = models.ForeignKey('webapp.Product', related_name='reviews', on_delete=models.CASCADE, verbose_name='Товар')
+    product = models.ForeignKey('webapp.Product', related_name='reviews', on_delete=models.CASCADE,
+                                verbose_name='Товар')
     description = models.TextField(max_length=3000, verbose_name='Текст отзыва')
     rating = models.IntegerField(choices=RATING_CHOICES, verbose_name='Оценка')
 
