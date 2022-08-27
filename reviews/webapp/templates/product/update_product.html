@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Изменить товар{% endblock %}
+
+{% block body %}
+    <form action="{% url 'webapp:update_product' product.pk %}" method="post" enctype="multipart/form-data">
+        {% include 'partial/simple_form.html' with button_text='Изменить' %}
+    </form>
+{% endblock %}

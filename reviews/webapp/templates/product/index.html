@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block body %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col" class="align-middle text-center">Название</th>
+            <th scope="col" class="align-middle text-center">Категория</th>
+            <th scope="col" class="align-middle text-center">Описание</th>
+            <th scope="col" class="align-middle text-center">Средняя оценка</th>
+            {% if perms.webapp.add_product %}
+                <th scope="col" class="align-middle text-center">Действия</th>
+            {% endif %}
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for product in products %}
+            <tr>
+                <th scope="row"><a href="{% url 'webapp:detail_product' product.pk %}">{{ product.name }}</a></th>
+                <td>{{ product.get_category_display }}</td>
+                <td>{{ product.description|default:'Нет описания' }}</td>
+                <td>{{ product.avg_rating }}</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Action buttons">
+                        {% if perms.webapp.add_product %}
+                            <a href="{% url 'webapp:update_product' product.pk %}"
+                               class="btn btn-primary">Редактировать</a>
+                            <form action="{% url 'webapp:delete_product' product.pk %}" method="post">
+                                {% csrf_token %}
+                                <input type="submit" value="Удалить" class="btn btn-danger">
+                            </form>
+                        {% endif %}
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

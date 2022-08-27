@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Редактировать отзыв{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Редактировать отзыв</h1>
+    <form action="" method="post">
+        {% include 'partial/simple_form.html' with button_text='Редактировать' %}
+    </form>
+{% endblock %}
